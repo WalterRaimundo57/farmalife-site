@@ -151,6 +151,28 @@
   position: relative;
   z-index: 1;
 }
+#mapa-instagram {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#mapa-instagram iframe {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  #mapa-instagram {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
   </style>
 </head>
@@ -202,6 +224,17 @@
     <p><strong>WhatsApp:</strong> <a href="https://wa.me/5583981064683" target="_blank">(83) 98106-4683</a></p>
     <p><strong>Atendimento:</strong> Segunda a sábado, das 07h às 17h</p>
     <p><strong>Instagram:</strong> <a href="https://www.instagram.com/farmalife___/" target="_blank">@farmalife___</a></p>
+  </section>
+
+  <section class="section" id="localizacao">
+    <h2>Localização & Instagram</h2>
+    <div id="mapa-instagram">
+      <!-- Mapa com localização -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d699.3259414605387!2d-37.96694979199985!3d-7.466915684170831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a67d4b655672b1%3A0x57dac49a2a0d3ef6!2sFarm%C3%A1cia%20Farmalife!5e0!3m2!1spt-BR!2sbr!4v1749752451332!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- Feed do Instagram via SnapWidget ou similar -->
+      <iframe src="https://snapwidget.com/embed/1074301" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+    </div>
   </section>
 
   <footer>
