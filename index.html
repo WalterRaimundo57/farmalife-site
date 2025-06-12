@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmácia Farma Life</title>
+  <style>
+    :root {
+      --vermelho: #F22424;
+      --preto: #000000;
+      --branco: #FFFFFF;
+      --cinza-claro: #F5F5F5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--cinza-claro);
+      color: var(--preto);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--preto);
+      color: var(--branco);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: var(--vermelho);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--vermelho), #c81010);
+      color: var(--branco);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: var(--vermelho);
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--branco);
+      border-left: 5px solid var(--vermelho);
+      padding: 20px;
+      flex: 1 1 280px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: var(--preto);
+      color: var(--branco);
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* Botão flutuante do WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: var(--branco);
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+      }
+    }
+
+    .hero {
+  background: url('farmalife.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* escurece o fundo para destacar texto */
+  z-index: 0;
+}
+
+.hero h2, .hero p {
+  position: relative;
+  z-index: 1;
+}
+
+  </style>
+</head>
+<body>
+
+    <header>
+        <img src="imagens/farmalife.jpg" alt="Farmácia Farma Life" style="max-width: 300px; margin: 20px auto; display: block;" />
+        <p>A farmácia que cuida da sua vida e do bem-estar da família!</p>
+      </header>
+      
+  <nav>
+    <a href="#">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Cuidando da sua saúde onde você estiver</h2>
+    <p>Atendimento humanizado na zona rural de Santana dos Garrotes</p>
+  </section>
+
+  <section class="section" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Medicamentos</h3>
+        <p>Ampla variedade de medicamentos éticos e genéricos com preços acessíveis.</p>
+      </div>
+      <div class="service-card">
+        <h3>Aplicação de Injetáveis</h3>
+        <p>Ambiente limpo, seguro e com profissionais capacitados.</p>
+      </div>
+      <div class="service-card">
+        <h3>Entrega em Domicílio</h3>
+        <p>Levamos seus medicamentos até você no conforto da sua casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <h2>Sobre a Farma Life</h2>
+    <p>A Farmácia Farma Life está localizada no distrito de Pitombeira de Dentro, na zona rural de Santana dos Garrotes - PB. Nosso propósito é oferecer saúde com qualidade, proximidade e confiança, mesmo longe dos grandes centros urbanos.</p>
+  </section>
+
+  <section class="section" id="contato">
+    <h2>Contato</h2>
+    <p><strong>Endereço:</strong> Pitombeira de Dentro, Santana dos Garrotes - PB</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5583981064683" target="_blank">(83) 98106-4683</a></p>
+    <p><strong>Atendimento:</strong> Segunda a sábado, das 07h às 17h</p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/farmalife___/" target="_blank">@farmalife___</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Farmácia Farma Life. Todos os direitos reservados.
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5583981064683" class="whatsapp-float" title="Fale conosco no WhatsApp" target="_blank">
+    <img src="imagens/logo_whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 10px;">
+  </a>
+
+</body>
+</html>
